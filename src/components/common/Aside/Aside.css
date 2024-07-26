@@ -1,0 +1,40 @@
+aside {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    min-width: 200px;
+    min-height: 600px;
+    color: white;
+    align-items: center;
+    position: fixed;
+}
+
+.aside-header h2 {
+    color: rgb(166, 169, 169); 
+    margin-top: 0;
+}
+
+.aside-list {
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    align-items: center;
+}
+
+.aside-list li {
+    list-style: none;
+    margin: 15px;
+}
+
+.nav-category {
+    text-decoration: none;
+    color: rgb(143, 143, 143);
+}
+
+.selected-category {
+    text-decoration: none;
+    color: #00C69E;
+    border: 2px solid #00C69E;
+    padding: 6px 14px;
+    border-radius: 22px;
+}

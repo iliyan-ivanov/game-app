@@ -1,0 +1,49 @@
+.game-details-section {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding: 35px;
+    margin-left: 200px;
+}
+
+.game-details-article {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.game-details-article-content {
+    padding: 40px;
+}
+
+.game-details-article-content h2 {
+    margin: 0px 0px 60px 0px;
+    font-size: 40px;
+}
+
+.game-details-image { 
+    display: block;
+    width: 700px;
+    height: 400px;
+    overflow: hidden;
+}
+
+.game-details-image img {
+    width: 100%;
+    display: inline;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 22px;
+}
+
+.game-details-description {
+    line-height: 50px;
+}
+
+.btns {
+    margin-top: 60px;
+}
+
+.btns .btn {
+    margin-right: 10px;
+}

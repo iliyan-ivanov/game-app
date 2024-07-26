@@ -1,0 +1,30 @@
+.game-card {
+    width: 270px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 10px 13px;
+}
+
+.game-card-image {
+    display: block;
+    width: 270px;
+    height: 160px;
+    overflow: hidden;
+    border: 3px solid #00C69E;
+    border-radius: 22px;
+}
+
+.game-card-image img {
+    display: inline;
+    height: 100%;
+    object-fit: cover;
+    width: 270px;
+}
+
+.card-header {
+    color: white;
+    margin: 8px;
+    color: #00C69E;
+}
