@@ -1,0 +1,35 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    align-items: center;
+    color:  #00C69E;
+    margin: auto;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.form-control {
+    min-height: 40px;
+    width: 600px;
+    margin: 10px;
+    text-align: center;
+}
+
+.form-description {
+    min-height: 200px;
+}
+
+.btn {
+    background-color:  #00C69E;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 28px;
+    text-decoration: none;
+    color: black;
+}
