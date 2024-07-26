@@ -82,7 +82,6 @@ const Login = () => {
             placeholder="Email"
             name="email"
             autoComplete="on"
-            set="on"
             onBlur={onEmailHandler}
           />
           <ErrorDiv>{emailErrorMessage}</ErrorDiv>
