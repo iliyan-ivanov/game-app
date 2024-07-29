@@ -1,7 +1,7 @@
 .home-page {
     display: flex;
     flex-direction: row;
-    background: url('https://images.pexels.com/photos/956999/milky-way-starry-sky-night-sky-star-956999.jpeg?cs=srgb&dl=pexels-felixmittermeier-956999.jpg&fm=jpg');
+    background: url('/public/stars.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     height: 920px;
