@@ -32,7 +32,7 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/create-game" element={<CreateGame />} />
         <Route path="/edit/:id" element={<EditGame />} />
-        <Route path="/details/:id" element={<GameDetails />} />
+        <Route path="/:id/details" element={<GameDetails />} />
         <Route path="/profile" element={<MyProfile />} />
       </Routes>
     </AuthContext.Provider>

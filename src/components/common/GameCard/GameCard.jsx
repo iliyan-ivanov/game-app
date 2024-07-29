@@ -4,7 +4,7 @@ import "./GameCard.css"
 const GameCard = (params) => {
     return (
         <article>
-            <Link to={`/details/${params.id}`}  className="game-card">
+            <Link to={`/${params.id}/details`}  className="game-card">
               <div className="game-card-image">
                 <img
                   src={params.image}
