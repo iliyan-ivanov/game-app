@@ -78,11 +78,12 @@ const EditGame = () => {
       category: category.value == "Select Category" ? "Others" : category.value,
     };
 
-    if (
-      titleErrorMessage.length < 1 &&
-      descriptionErrorMessage.length < 1 &&
-      imgErrorMessage.length < 1
-    ) {
+    if (titleErrorMessage.length < 1 && 
+        descriptionErrorMessage.length < 1 &&
+        imgErrorMessage.length < 1 &&
+        title.value != '' &&
+        description.value != '' &&
+        imageUrl.value != '') {
       editGame(id, gameData)
         .then((res) => {
           navigate("/categories/All");
