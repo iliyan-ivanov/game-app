@@ -7,13 +7,15 @@ import Login from "./components/Login/Login";
 import Register from "./components/Register/Register";
 import CreateGame from "./components/CreateGame/CreateGame";
 import GameDetails from "./components/GameDetails/GameDetails";
+import MyProfile from "./components/MyProfile/MyProfile";
+import EditGame from "./components/EditGame/EditGame";
+import Home from "./components/Home/Home";
+import PageNotFound from "./components/PageNotFound/PageNotFound";
 import AuthContext from "./contexts/AuthContext";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "./config/firebase";
 import "./App.css";
-import MyProfile from "./components/MyProfile/MyProfile";
-import EditGame from "./components/EditGame/EditGame";
-import Home from "./components/Home/Home";
+
 
 function App() {
   const [user, setUser] = useState(null);
@@ -34,6 +36,7 @@ function App() {
         <Route path="/edit/:id" element={<EditGame />} />
         <Route path="/:id/details" element={<GameDetails />} />
         <Route path="/profile" element={<MyProfile />} />
+        <Route path="*" element={<PageNotFound />} />
       </Routes>
     </AuthContext.Provider>
   );
