@@ -28,8 +28,6 @@ const Register = () => {
     if (email.length < 1) {
       setEmailErrorMessage("Please insert email!");
     }
-
-    
   };
 
   const onPasswordHandler = (e) => {
@@ -77,15 +75,23 @@ const Register = () => {
       rePasswordErrorMessage < 1
     ) {
       setErrorMessage("");
-      register(email, password)
-        .then((res) => {
-          navigate("/categories/All");
-        })
-        .catch((err) => {
-          console.log("Something is wrong");
-          console.log(err);
-          setErrorMessage(err);
-        });
+
+      if (emailErrorMessage < 1 &&
+         passwordErrorMessage < 1 &&
+         rePasswordErrorMessage < 1 &&
+         email.value != ''&&
+         password.value != ''&&
+         rePassword.value != '') {
+        register(email, password)
+          .then((res) => {
+            navigate("/categories/All");
+          })
+          .catch((err) => {
+            console.log("Something is wrong");
+            console.log(err);
+            setErrorMessage(err);
+          });
+      }
     }
   };
 

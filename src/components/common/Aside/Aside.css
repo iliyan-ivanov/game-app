@@ -29,6 +29,10 @@ aside .active {
     color: #00C69E;
 }
 
+.aside-icon:hover {
+    cursor: pointer;
+}
+
 .aside-list {
     display: flex;
     flex-direction: column;

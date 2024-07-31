@@ -75,7 +75,12 @@ const CreateGame = () => {
       creator: user.uid,
     };
 
-    if (titleErrorMessage.length < 1 && descriptionErrorMessage.length < 1 && imgErrorMessage.length < 1) {
+    if (titleErrorMessage.length < 1 && 
+      descriptionErrorMessage.length < 1 &&
+      imgErrorMessage.length < 1 &&
+      title.value != '' &&
+      description.value != '' &&
+      imageUrl.value != '') {
       createGame(gameData)
       .then((res) => {
         navigate("/categories/All");

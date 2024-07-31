@@ -52,7 +52,10 @@ const Login = () => {
 
     const { email, password } = e.target;
 
-    if (emailErrorMessage < 1 && passwordErrorMessage < 1) {
+    if (emailErrorMessage < 1 && 
+       passwordErrorMessage < 1 && 
+       email.value != '' &&
+       password.value != '') {
       login(email, password)
       .then((res) => {
         navigate("/categories/All");
