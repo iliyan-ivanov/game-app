@@ -31,7 +31,7 @@ const Header = () => {
             <h3>{user?.email}</h3>
           </Link>
         </section>
-        <section>
+        <section className="top-nav-auth-section">
           {user ? (
             <ul className="top-nav-list">
               <li className="top-nav-list-item">
