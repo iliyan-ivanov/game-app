@@ -61,19 +61,12 @@ const GameDetails = () => {
                 </div>
               ) : (
                 <div className="btns">
-                  {game.likes?.includes(user?.uid) ? (
-                    <Link className="btn" onClick={onGameUnLike}>
-                      {" "}
-                      Unlike
-                    </Link>
-                  ) : user ? (
-                    <Link className="btn" onClick={onGameLike}>
-                      {" "}
-                      Like{" "}
-                    </Link>
-                  ) : (
-                    ""
-                  )}
+                  {game.likes?.includes(user?.uid) 
+                    ? (<Link className="btn" onClick={onGameUnLike}>Unlike</Link>) 
+                    : user 
+                        ? (<Link className="btn" onClick={onGameLike}>Like</Link>) 
+                        : ( "")
+                  }
                 </div>
               )}
             </div>
