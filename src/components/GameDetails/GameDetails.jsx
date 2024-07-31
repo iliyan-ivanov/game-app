@@ -2,7 +2,12 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import { useEffect, useState, useContext } from "react";
 
 import AuthContext from "../../contexts/AuthContext";
-import { deleteGame, getOneGame, likeGame, unlikeGame } from "../../services/GameService";
+import {
+  deleteGame,
+  getOneGame,
+  likeGame,
+  unlikeGame,
+} from "../../services/GameService";
 import Aside from "../common/Aside/Aside";
 import "./GameDetails.css";
 
@@ -27,10 +32,9 @@ const GameDetails = () => {
   }
 
   function onDeleteGame() {
-    deleteGame(id)
-      .then((res) => {
-        navigate('/categories/All')
-      })
+    deleteGame(id).then((res) => {
+      navigate("/categories/All");
+    });
   }
 
   return (
@@ -48,18 +52,20 @@ const GameDetails = () => {
               <p>Likes: {game.likes?.length}</p>
               {user?.uid == game.creator ? (
                 <div className="btns">
-                  <Link to={`/edit/${game.id}`} className="btn">
+                  <Link to={`/${game.id}/edit`} className="btn">
                     Edit
                   </Link>
-                  <Link className="btn" onClick={onDeleteGame}>Delete</Link>
+                  <Link className="btn" onClick={onDeleteGame}>
+                    Delete
+                  </Link>
                 </div>
               ) : (
                 <div className="btns">
-                  {game.likes?.includes(user?.uid)  
-                  ? <Link className="btn" onClick={onGameUnLike}> Unlike</Link>
-                  : user 
-                    ? <Link className="btn" onClick={onGameLike}> Like </Link> 
-                    : ""
+                  {game.likes?.includes(user?.uid) 
+                    ? (<Link className="btn" onClick={onGameUnLike}>Unlike</Link>) 
+                    : user 
+                        ? (<Link className="btn" onClick={onGameLike}>Like</Link>) 
+                        : ( "")
                   }
                 </div>
               )}

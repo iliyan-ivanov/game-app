@@ -33,7 +33,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/create-game" element={<CreateGame />} />
-        <Route path="/edit/:id" element={<EditGame />} />
+        <Route path="/:id/edit" element={<EditGame />} />
         <Route path="/:id/details" element={<GameDetails />} />
         <Route path="/profile" element={<MyProfile />} />
         <Route path="*" element={<PageNotFound />} />
