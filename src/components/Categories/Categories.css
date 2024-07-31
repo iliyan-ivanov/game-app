@@ -27,3 +27,40 @@ main {
     justify-content: center;
 }
 
+
+@media all and (max-width: 1385px) {
+    .home-container input {
+        width: 700px;
+        text-align: center;
+        padding-left: 0;
+    }
+}
+
+@media all and (max-width: 980px) {
+    .home-container input {
+        width: 450px;
+    }
+
+    .home-container-games .game-card,
+    .home-container-games .game-card-image,
+    .home-container-games .game-card-image img {
+        width: 400px;
+    }
+
+}
+
+@media all and (max-width: 740px) {
+    .home-container input {
+        width: 300px;
+    }
+
+    .home-container-games .game-card,
+    .home-container-games .game-card-image,
+    .home-container-games .game-card-image img {
+        width: 300px;
+    }
+
+    .top-nav {
+        flex-direction: column;
+    }
+}

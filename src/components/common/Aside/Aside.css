@@ -9,9 +9,24 @@ aside {
     position: fixed;
 }
 
+aside .active {
+    position: fixed;
+    margin-top: 64px;
+}
+
+.aside-header {
+    display: flex;
+}
+
 .aside-header h2 {
     color: rgb(166, 169, 169); 
     margin-top: 0;
+    margin-right: 10px;
+}
+
+.aside-icon {
+    margin-top: 6px;
+    color: #00C69E;
 }
 
 .aside-list {
@@ -19,6 +34,7 @@ aside {
     flex-direction: column;
     padding: 0px;
     align-items: center;
+    left: -200px;
 }
 
 .aside-list li {

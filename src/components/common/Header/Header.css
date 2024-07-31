@@ -7,9 +7,11 @@ header {
 
 .top-nav {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     text-align: center;
     padding: 0px 40px;
+    align-items: center;
 }
 
 .top-nav-header a {
@@ -52,4 +54,19 @@ header {
 .top-nav-list li a {
     text-decoration: none;
     color: #00C69E;
+}
+
+
+@media all and (max-width: 740px) {
+    .top-nav {
+        flex-direction: column;
+    }
+
+    .nav-icon-section {
+        margin-left: -10px;
+    }
+
+    .top-nav-auth-section {
+        margin-left: -30px;
+    }
 }
