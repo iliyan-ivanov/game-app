@@ -96,7 +96,6 @@ const EditGame = () => {
 
   return (
     <main>
-      <Aside />
       <form className="form" onSubmit={onEditHandler}>
         <h1>Edit Game</h1>
         <div className="form-group">

@@ -58,6 +58,10 @@ header {
 
 
 @media all and (max-width: 740px) {
+    header {
+        position: relative;
+    }
+
     .top-nav {
         flex-direction: column;
     }

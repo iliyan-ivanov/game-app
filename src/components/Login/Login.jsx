@@ -74,7 +74,6 @@ const Login = () => {
 
   return (
     <main>
-      <Aside />
       <form className="form" onSubmit={onLoginHandler}>
         <h1>Login</h1>
         <div className="form-group">

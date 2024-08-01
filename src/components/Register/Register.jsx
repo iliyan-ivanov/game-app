@@ -97,7 +97,6 @@ const Register = () => {
 
   return (
     <main>
-      <Aside />
       <form className="form" onSubmit={onRegisterHandler}>
         <h1>Register</h1>
         <div className="form-group">

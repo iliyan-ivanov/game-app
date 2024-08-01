@@ -99,7 +99,6 @@ const CreateGame = () => {
 
   return (
     <main>
-      <Aside />
       <form className="form" onSubmit={onCreateHandler}>
         <h1>Add Game</h1>
         <div className="form-group">

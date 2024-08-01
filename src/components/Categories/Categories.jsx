@@ -34,7 +34,7 @@ const Categories = () => {
   }
 
   return (
-    <main>
+    <main className="categories-main"> 
       <Aside />
       <section className="home-container">
         <input
