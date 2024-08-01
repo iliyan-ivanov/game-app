@@ -9,9 +9,9 @@ aside {
     position: fixed;
 }
 
-aside .active {
-    position: fixed;
-    margin-top: 64px;
+aside .hide {
+    position: absolute;
+    left: -200px;
 }
 
 .aside-header {
@@ -38,7 +38,7 @@ aside .active {
     flex-direction: column;
     padding: 0px;
     align-items: center;
-    left: -200px;
+    background-color: rgb(48, 48, 48);
 }
 
 .aside-list li {
@@ -57,4 +57,23 @@ aside .active {
     border: 2px solid #00C69E;
     padding: 6px 14px;
     border-radius: 22px;
+}
+
+
+@media all and (max-width: 940px) {
+
+    aside {
+        min-height: 20px;
+    }
+    
+    aside .aside-list {
+        position: absolute;
+        left: 60px;
+        margin-top: 64px;
+        align-items: center;
+    }
+
+    aside .hide {
+        left: -600px;
+    }
 }
