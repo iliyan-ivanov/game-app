@@ -38,7 +38,7 @@ const GameDetails = () => {
   }
 
   return (
-    <main>
+    <main className="game-details-main">
       <Aside />
       <section className="game-details-section">
         <article className="game-details-article">
