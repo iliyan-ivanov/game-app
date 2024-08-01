@@ -77,3 +77,9 @@ aside .hide {
         left: -600px;
     }
 }
+
+@media all and (max-width: 740px) {
+    aside {
+        position: relative;
+    }
+}

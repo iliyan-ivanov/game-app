@@ -14,6 +14,7 @@
 
 .game-details-article-content {
     padding: 40px;
+    padding-bottom: 0;
 }
 
 .game-details-article-content h2 {
@@ -47,4 +48,53 @@
 
 .btns .btn {
     margin-right: 10px;
+}
+
+
+@media all and (max-width: 1230px) {
+    .game-details-section {
+        align-items: center;
+    }
+
+    .game-details-article {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .game-details-article-content {
+        height: 160px;
+    }
+
+    .game-details-article-content h2 {
+        font-size: 30px;
+        margin: 0;
+    }
+}
+
+@media all and (max-width: 980px) {
+    .game-details-image { 
+        width: 500px;
+        height: 250px;
+    }
+}
+
+@media all and (max-width: 780px) {
+    .game-details-image { 
+        width: 400px;
+        height: 200px;
+    }
+
+    
+}
+
+@media all and (max-width: 740px) {
+    .game-details-main { 
+        flex-direction: column;
+    }
+    
+    .game-details-section {
+        margin: 0;
+        padding-top: 0;
+    }
 }
