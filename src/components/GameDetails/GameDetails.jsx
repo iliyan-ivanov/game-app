@@ -47,10 +47,14 @@ const GameDetails = () => {
           </div>
           <div className="game-details-article-content">
             <h2>{game.title}</h2>
-            <div>
+            <article className="game-details-content-details">
+            <div className="game-details-criteries">
               <p>Category: {game.category}</p>
               <p>Likes: {game.likes?.length}</p>
-              {user?.uid == game.creator ? (
+            </div>
+            <div className="game-details-btns">
+              {user?.uid == game.creator 
+                ? (
                 <div className="btns">
                   <Link to={`/${game.id}/edit`} className="btn">
                     Edit
@@ -62,14 +66,21 @@ const GameDetails = () => {
               ) : (
                 <div className="btns">
                   {game.likes?.includes(user?.uid) 
-                    ? (<Link className="btn" onClick={onGameUnLike}>Unlike</Link>) 
-                    : user 
-                        ? (<Link className="btn" onClick={onGameLike}>Like</Link>) 
-                        : ( "")
-                  }
+                    ? (
+                    <Link className="btn" onClick={onGameUnLike}>
+                      Unlike
+                    </Link>
+                  ) : user ? (
+                    <Link className="btn" onClick={onGameLike}>
+                      Like
+                    </Link>
+                  ) : (
+                    ""
+                  )}
                 </div>
               )}
             </div>
+            </article>
           </div>
         </article>
         <article className="game-details-description">

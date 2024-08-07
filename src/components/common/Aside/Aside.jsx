@@ -23,6 +23,10 @@ const Aside = () => {
   useEffect(() => {
     let categoriesList = document.querySelector(".aside-list")
 
+    if (window.innerWidth < 740) {
+      categoriesList.classList.add('hide');
+    }
+
     window.addEventListener('resize', () => {
       if (window.innerWidth < 740) {
         categoriesList.classList.add('hide');
@@ -30,7 +34,7 @@ const Aside = () => {
         categoriesList.classList.remove('hide');
       }
     })
-  })
+  }, [])
   
   return (
     <aside id="aside">
