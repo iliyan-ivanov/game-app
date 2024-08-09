@@ -30,7 +30,7 @@ const Categories = () => {
       return;
     }
 
-    setGames(allGames.filter(x => x.title.toLowerCase().includes(searchTitle)));
+    setGames(allGames.filter(x => x.title.toLowerCase().includes(searchTitle.toLowerCase())));
   }
 
   return (
