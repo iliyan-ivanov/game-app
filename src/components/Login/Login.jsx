@@ -1,10 +1,9 @@
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
-import "./Login.css";
 import ErrorDiv from "../common/ErrorDiv/ErrorDiv";
-import Aside from "../common/Aside/Aside";
 import { login } from "../../services/UserService";
+import "./Login.css";
 
 const Login = () => {
   const [emailErrorMessage, setEmailErrorMessage] = useState("");
@@ -59,7 +58,7 @@ const Login = () => {
       login(email, password)
       .then((res) => {
         navigate("/categories/All");
-        console.log("Succsesfully!");
+        console.log("Successfully!");
       })
       .catch((error) => {
         if(error.message == "Firebase: Error (auth/wrong-password).") {

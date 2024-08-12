@@ -1,9 +1,9 @@
+import { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import AuthContext from "../../../contexts/AuthContext";
+import { logout } from "../../../services/UserService";
 import logo from "/controller.png";
 import "./Header.css";
-import AuthContext from "../../../contexts/AuthContext";
-import { useContext } from "react";
-import { logout } from "../../../services/UserService";
 
 const Header = () => {
   const navigate = useNavigate();

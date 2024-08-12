@@ -1,6 +1,5 @@
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-import Aside from "../common/Aside/Aside";
 import ErrorDiv from "../common/ErrorDiv/ErrorDiv";
 import { register } from "../../services/UserService";
 
