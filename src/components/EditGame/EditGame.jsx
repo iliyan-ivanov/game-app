@@ -85,10 +85,10 @@ const EditGame = () => {
         description.value != '' &&
         imageUrl.value != '') {
       editGame(id, gameData)
-        .then((res) => {
+        .then(() => {
           navigate("/categories/All");
         })
-        .catch((err) => {
+        .catch(() => {
           console.log("problem with logging in");
         });
     }

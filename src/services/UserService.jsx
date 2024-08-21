@@ -3,7 +3,7 @@ import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "fire
 
 export function login(email, password) {
   return signInWithEmailAndPassword(auth, email.value, password.value)
-    .then((res) => {
+    .then(() => {
       console.log("succcessfully logged in");
     })
     
@@ -11,7 +11,7 @@ export function login(email, password) {
 
 export function register(email, password) {
     return createUserWithEmailAndPassword(auth, email.value, password.value)
-            .then(res => {
+            .then(() => {
                 console.log('Succcessfully regirstrated!');
             })
 }
