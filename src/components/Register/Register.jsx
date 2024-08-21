@@ -82,7 +82,7 @@ const Register = () => {
          password.value != ''&&
          rePassword.value != '') {
         register(email, password)
-          .then((res) => {
+          .then(() => {
             navigate("/categories/All");
           })
           .catch((err) => {

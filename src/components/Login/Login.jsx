@@ -56,7 +56,7 @@ const Login = () => {
        email.value != '' &&
        password.value != '') {
       login(email, password)
-      .then((res) => {
+      .then(() => {
         navigate("/categories/All");
         console.log("Successfully!");
       })

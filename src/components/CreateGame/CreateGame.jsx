@@ -82,10 +82,10 @@ const CreateGame = () => {
       description.value != '' &&
       imageUrl.value != '') {
       createGame(gameData)
-      .then((res) => {
+      .then(() => {
         navigate("/categories/All");
       })
-      .catch((err) => {
+      .catch(() => {
         console.log("problem with logging in");
       });
 
