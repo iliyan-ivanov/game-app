@@ -19,7 +19,7 @@ const Home = () => {
         ? <Link className="home-btns" to="/categories/All">Categories</Link>
         : <Link className="home-btns" to="/login">Login</Link>}
       </article>
-      <article className="home-article">
+      <article className="home-article home-headings">
         <h1>Welcome to our Game site!</h1>
         <h2>{user ? "Enjoy" : "Please Login "}</h2>
         <div className="spiderman">

@@ -37,3 +37,21 @@
 .btn:hover {
     cursor: pointer;
 }
+
+@media all and (max-width: 700px) {
+    .form-control {
+        width: 400px;
+    }
+}
+
+@media all and (max-width: 460px) {
+    .form-control {
+        width: 300px;
+    }
+}
+
+@media all and (max-width: 380px) {
+    .form-control {
+        width: 200px;
+    }
+}
