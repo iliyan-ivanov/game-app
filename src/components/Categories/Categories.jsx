@@ -26,7 +26,6 @@ const Categories = () => {
     let searchTitle = e.target.value;
     if(searchTitle == '') {
      setGames(allGames)
-      console.log('ops');
       return;
     }
 
