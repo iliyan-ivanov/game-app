@@ -1,4 +1,5 @@
 import { db } from "../config/firebase";
+import uniqid from 'uniqid';
 import {
   collection,
   getDocs,
@@ -66,9 +67,9 @@ export async function editGame(gameId, data) {
 }
 
 export async function likeGame(userId, gameId) {
-  const gameLikes = await doc(db, "games", gameId);
+  const game = await doc(db, "games", gameId);
 
-  return await updateDoc(gameLikes, {
+  return await updateDoc(game, {
     likes: arrayUnion(userId),
   });
 }
@@ -83,4 +84,21 @@ export async function unlikeGame(userId, gameId) {
 
 export async function deleteGame(gameId) {
   return await deleteDoc(doc(db, "games", gameId));
+}
+
+export async function addComment(gameId, user, comment) {
+  const game = await doc(db, "games", gameId);
+
+  return await updateDoc(game, {
+    comments: arrayUnion({user, 
+                          comment, 
+                          id: uniqid()}),
+  });
+}
+
+export async function getComments(id) {
+  const game = await getDoc(doc(db, "games", `${id}`));
+
+  return game.data().comments;
+  
 }
